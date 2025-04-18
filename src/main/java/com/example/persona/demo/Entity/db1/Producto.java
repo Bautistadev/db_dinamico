@@ -1,4 +1,4 @@
-package com.example.persona.demo.Entity.db2;
+package com.example.persona.demo.Entity.db1;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,22 +1,20 @@
 package com.example.persona.demo;
 
-import com.example.persona.demo.Configuration.Datasource.DataSourceContextHolder;
-import com.example.persona.demo.Entity.db1.Persona;
-import com.example.persona.demo.Entity.db2.Producto;
-import com.example.persona.demo.Mapper.PersonaMapper;
-import com.example.persona.demo.Repository.PersonaRepository;
-import com.example.persona.demo.Repository.ProductoRepository;
+import com.example.persona.demo.DTO.PersonaRequestDTO;
+import com.example.persona.demo.Service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-import javax.sql.DataSource;
+
 import java.time.LocalDate;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy
 @ComponentScan(basePackages = "com.example.persona.demo")
 public class DemoApplication implements CommandLineRunner {
 
@@ -31,9 +29,8 @@ public class DemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		//POR DEFECTO LA DB1 ES QUIEN ESTA ACTIVA EN EL CONTEXTO
-		PersonaRepository personaRepository = this.applicationContext.getBean(PersonaRepository.class);
-		PersonaMapper personaMapper = this.applicationContext.getBean(PersonaMapper.class);
-		Persona persona = Persona.builder()
+		PersonaService personaRepository = this.applicationContext.getBean(PersonaService.class);
+		PersonaRequestDTO persona = PersonaRequestDTO.builder()
 				.name("master")
 				.lastname("master")
 				.dni("43463078")
@@ -41,11 +38,10 @@ public class DemoApplication implements CommandLineRunner {
 				.birthDate(LocalDate.of(2001, 7,17))
 				.build();
 		personaRepository.save(persona);
-		personaRepository.findAll().forEach(e->System.out.println(personaMapper.toPersonaDTO(e)));
-		System.out.println(personaRepository.existsByDniOrEmail(persona.getDni(),persona.getEmail()));
+		System.out.println(personaRepository.findAll());
 
 		//SETEAMOS EL CONTEXTO REEMPLAZANDO LA DB1 POR LA DB2 EN EL MISMO HILO
-		DataSourceContextHolder.setDataSource("db2");
+		/*DataSourceContextHolder.setDataSource("db2");
 		ProductoRepository productoRepository = this.applicationContext.getBean(ProductoRepository.class);
 		Producto producto = Producto.builder()
 				.name("Televisor")
@@ -53,6 +49,6 @@ public class DemoApplication implements CommandLineRunner {
 		productoRepository.save(producto);
 		System.out.println(productoRepository.findAll());
 
-		DataSourceContextHolder.clearDataSource();
+		DataSourceContextHolder.clearDataSource();*/
 	}
 }
