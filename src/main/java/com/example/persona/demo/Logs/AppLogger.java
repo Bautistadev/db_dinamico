@@ -29,20 +29,20 @@ public class AppLogger {
     }
 
     private String formatMessage(String color, String message) {
-        return String.format("%s%s %s[%s]%s %s[%s]%s %s",
-                color, RESET,         // emoji con color
-                BOLD + CYAN, className, RESET,  // className con cian bold
-                YELLOW, Thread.currentThread().getName(), RESET,  // thread name con amarillo
-                message // mensaje plano
+        return String.format("%s[%s]%s %s",
+                color,  // Color de mensaje
+                className,  // Nombre de la clase
+                RESET,
+                message // El mensaje simple
         );
     }
 
     public void info(String message) {
-        logger.info(formatMessage( BLUE, message));
+        logger.info(formatMessage( Color.GREEN, message));
     }
 
     public void debug(String message) {
-        logger.debug(formatMessage( CYAN, message));
+        logger.debug(formatMessage( Color.GREEN, message));
     }
 
     public void warn(String message) {

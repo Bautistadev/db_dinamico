@@ -1,0 +1,583 @@
+========================================================================================================================
+ 2025-04-18 14:24:42.683 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.742 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@55d99dc3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@521a506c)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.745 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@37f71c05) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5bd3ca3c)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.745 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2dd8a273) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@59f76e56)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.745 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@566f4659) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1328f482)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.745 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7b8b07ae) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@19ec5357)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.746 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@351d93bd) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@61c5fd78)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.746 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@42503099) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39dda56f)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.746 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@60844992) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2ee456c7)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:42.746 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6df37f7a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39514976)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.118 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.416 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@40da1644) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5980e29f)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2cdd156b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@487bc2fe)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@58038583) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6491006)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@42fb2be9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@54816d7a)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@106ac5f4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5eed2edf)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4552e288) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1a67bde5)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5c648e38) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6bc8d8bd)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@395c21ee) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1e733bb5)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.422 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@669e730d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4b3e4253)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.457 | DEBUG | [main] | 
+    drop table if exists Personas
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.477 | DEBUG | [main] | 
+    create table Personas (
+        birthdate date not null,
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint not null auto_increment,
+        dni varchar(12) not null,
+        email varchar(255) not null,
+        lastname varchar(255) not null,
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.490 | DEBUG | [main] | 
+    alter table Personas 
+       add constraint UK2jcj1t357ygc2ea4gw59lcb9g unique (dni)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.502 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db1'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.516 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.635 | DEBUG | [main] | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@14c7ab73) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@4fcb796f)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.635 | DEBUG | [main] | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1483c738) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@66c91224)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.676 | DEBUG | [main] | 
+    set client_min_messages = WARNING
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.676 | DEBUG | [main] | 
+    drop table if exists Productos cascade
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.679 | DEBUG | [main] | 
+    create table Productos (
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        primary key (id)
+    )
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:43.684 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db2'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:44.256 | DEBUG | [main] | select p1_0.id from personas p1_0 where (p1_0.delete_date IS NULL) and (p1_0.dni=? or p1_0.email=?) limit ?
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:44.277 | DEBUG | [main] | insert into personas (birthdate,create_date,delete_date,dni,email,lastname,name,update_date) values (?,?,?,?,?,?,?,?)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:24:44.293 | DEBUG | [main] | select p1_0.id,p1_0.birthdate,p1_0.create_date,p1_0.delete_date,p1_0.dni,p1_0.email,p1_0.lastname,p1_0.name,p1_0.update_date from personas p1_0 where (p1_0.delete_date IS NULL)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:03.610 | INFO  | [SpringApplicationShutdownHook] | Closing JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.680 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.746 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5d297d4d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1dd44289)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@8b89b3a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@526893f)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3de45b6c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@37caecda)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7be7c052) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4ab9d160)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5599dc60) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@35554635)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@70f5f59d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@74431832)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6fa2a006) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@70592729)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fdf7da2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@43b172e3)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:07.747 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@39695803) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@304068)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.132 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.417 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.424 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3328db4f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4f9e9c21)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.424 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1390a43a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7bf2e475)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.424 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@e75bae7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3531509c)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.424 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@23169374) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4f2b1a2f)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.424 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6c2a33af) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@53202b06)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.424 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@44ba9f25) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@53570fff)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.424 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6e5df971) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c7787a7)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.425 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2ca464bb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4767be27)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.425 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@46f041cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@46baac0d)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.464 | DEBUG | [main] | 
+    drop table if exists Personas
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.484 | DEBUG | [main] | 
+    create table Personas (
+        birthdate date not null,
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint not null auto_increment,
+        dni varchar(12) not null,
+        email varchar(255) not null,
+        lastname varchar(255) not null,
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.500 | DEBUG | [main] | 
+    alter table Personas 
+       add constraint UK2jcj1t357ygc2ea4gw59lcb9g unique (dni)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.512 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db1'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.528 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.733 | DEBUG | [main] | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@197da701) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@35fd03d9)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.733 | DEBUG | [main] | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@77737e3e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@42e32feb)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.773 | DEBUG | [main] | 
+    set client_min_messages = WARNING
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.773 | DEBUG | [main] | 
+    drop table if exists Productos cascade
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.776 | DEBUG | [main] | 
+    create table Productos (
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        primary key (id)
+    )
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:08.781 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db2'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:17.027 | DEBUG | [main] | select p1_0.id from personas p1_0 where (p1_0.delete_date IS NULL) and (p1_0.dni=? or p1_0.email=?) limit ?
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:17.049 | DEBUG | [main] | insert into personas (birthdate,create_date,delete_date,dni,email,lastname,name,update_date) values (?,?,?,?,?,?,?,?)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:20.579 | DEBUG | [main] | select p1_0.id,p1_0.birthdate,p1_0.create_date,p1_0.delete_date,p1_0.dni,p1_0.email,p1_0.lastname,p1_0.name,p1_0.update_date from personas p1_0 where (p1_0.delete_date IS NULL)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:28:25.912 | INFO  | [SpringApplicationShutdownHook] | Closing JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.849 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.928 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7be7c052) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4ab9d160)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@304068) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@54d60fa1)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1cb849b2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6fe2a366)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6dd38df2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@99c3cee)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@57b711b6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2db461b5)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5c79c5ec) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@34eaf9c1)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5bbf744b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@55881f40)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@474ce6b8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@248b2b61)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:09.929 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4b61e97) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@11d1735e)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.325 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.596 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@82382d1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6c120b00)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@d8a2b1b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2709e075)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3328db4f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4f9e9c21)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1390a43a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7bf2e475)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@e75bae7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3531509c)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@23169374) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4f2b1a2f)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6c2a33af) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@53202b06)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@44ba9f25) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@53570fff)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.605 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6e5df971) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c7787a7)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.650 | DEBUG | [main] | 
+    drop table if exists Personas
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.697 | DEBUG | [main] | 
+    create table Personas (
+        birthdate date not null,
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint not null auto_increment,
+        dni varchar(12) not null,
+        email varchar(255) not null,
+        lastname varchar(255) not null,
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.718 | DEBUG | [main] | 
+    alter table Personas 
+       add constraint UK2jcj1t357ygc2ea4gw59lcb9g unique (dni)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.736 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db1'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.753 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.864 | DEBUG | [main] | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@1851f19f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@33f3ebfc)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.864 | DEBUG | [main] | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5cb3cfef) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@eb77241)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.914 | DEBUG | [main] | 
+    set client_min_messages = WARNING
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.915 | DEBUG | [main] | 
+    drop table if exists Productos cascade
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.918 | DEBUG | [main] | 
+    create table Productos (
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        primary key (id)
+    )
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:10.924 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db2'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:16.894 | DEBUG | [main] | select p1_0.id from personas p1_0 where (p1_0.delete_date IS NULL) and (p1_0.dni=? or p1_0.email=?) limit ?
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:16.923 | DEBUG | [main] | insert into personas (birthdate,create_date,delete_date,dni,email,lastname,name,update_date) values (?,?,?,?,?,?,?,?)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:28.333 | DEBUG | [main] | select p1_0.id,p1_0.birthdate,p1_0.create_date,p1_0.delete_date,p1_0.dni,p1_0.email,p1_0.lastname,p1_0.name,p1_0.update_date from personas p1_0 where (p1_0.delete_date IS NULL)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:42.603 | INFO  | [SpringApplicationShutdownHook] | Closing JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.174 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.232 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7a117dc2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1d444652)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@534d0e20) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7d18338b)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3f4a605f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@30c8c6ab)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@bcfe29c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@37f71c05)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5bd3ca3c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2dd8a273)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@59f76e56) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@566f4659)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1328f482) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7b8b07ae)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@19ec5357) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@351d93bd)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.233 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@61c5fd78) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@42503099)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.594 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.883 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.888 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@12f12744) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1c618295)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.888 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@344acc03) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50eae15a)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.888 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4bba2704) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5b5f61cc)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.888 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39179470) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3ef04239)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.888 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2468c0e4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@49994a4)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.888 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1a82453) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3df54fd5)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.889 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5ff8d76f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@178c4480)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.889 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5746609e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40da1644)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.889 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5980e29f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2cdd156b)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.919 | DEBUG | [main] | 
+    drop table if exists Personas
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.934 | DEBUG | [main] | 
+    create table Personas (
+        birthdate date not null,
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint not null auto_increment,
+        dni varchar(12) not null,
+        email varchar(255) not null,
+        lastname varchar(255) not null,
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.948 | DEBUG | [main] | 
+    alter table Personas 
+       add constraint UK2jcj1t357ygc2ea4gw59lcb9g unique (dni)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.959 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db1'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:45.973 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.093 | DEBUG | [main] | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@2fb555e8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@19a544cd)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.093 | DEBUG | [main] | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6c502018) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@58c93be3)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.132 | DEBUG | [main] | 
+    set client_min_messages = WARNING
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.133 | DEBUG | [main] | 
+    drop table if exists Productos cascade
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.136 | DEBUG | [main] | 
+    create table Productos (
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        primary key (id)
+    )
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.140 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db2'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.736 | DEBUG | [main] | select p1_0.id from personas p1_0 where (p1_0.delete_date IS NULL) and (p1_0.dni=? or p1_0.email=?) limit ?
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.755 | DEBUG | [main] | insert into personas (birthdate,create_date,delete_date,dni,email,lastname,name,update_date) values (?,?,?,?,?,?,?,?)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:31:46.771 | DEBUG | [main] | select p1_0.id,p1_0.birthdate,p1_0.create_date,p1_0.delete_date,p1_0.dni,p1_0.email,p1_0.lastname,p1_0.name,p1_0.update_date from personas p1_0 where (p1_0.delete_date IS NULL)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:56.195 | INFO  | [SpringApplicationShutdownHook] | Closing JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.075 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.131 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7a117dc2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1d444652)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.131 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@534d0e20) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7d18338b)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.131 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3f4a605f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@30c8c6ab)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.132 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@bcfe29c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@37f71c05)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.132 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5bd3ca3c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2dd8a273)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.132 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@59f76e56) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@566f4659)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.132 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1328f482) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7b8b07ae)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.132 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@19ec5357) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@351d93bd)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.132 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@61c5fd78) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@42503099)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.495 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.852 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.857 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@12f12744) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1c618295)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.857 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@344acc03) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50eae15a)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.858 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4bba2704) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5b5f61cc)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.858 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39179470) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3ef04239)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.858 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2468c0e4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@49994a4)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.858 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1a82453) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3df54fd5)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.858 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5ff8d76f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@178c4480)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.858 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5746609e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40da1644)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.858 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5980e29f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2cdd156b)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.886 | DEBUG | [main] | 
+    drop table if exists Personas
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.931 | DEBUG | [main] | 
+    create table Personas (
+        birthdate date not null,
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint not null auto_increment,
+        dni varchar(12) not null,
+        email varchar(255) not null,
+        lastname varchar(255) not null,
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.952 | DEBUG | [main] | 
+    alter table Personas 
+       add constraint UK2jcj1t357ygc2ea4gw59lcb9g unique (dni)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.967 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db1'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:32:59.982 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.106 | DEBUG | [main] | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@3338d706) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@f776b4a)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.106 | DEBUG | [main] | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fb555e8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@19a544cd)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.145 | DEBUG | [main] | 
+    set client_min_messages = WARNING
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.146 | DEBUG | [main] | 
+    drop table if exists Productos cascade
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.149 | DEBUG | [main] | 
+    create table Productos (
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        primary key (id)
+    )
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.154 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db2'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.747 | DEBUG | [main] | select p1_0.id from personas p1_0 where (p1_0.delete_date IS NULL) and (p1_0.dni=? or p1_0.email=?) limit ?
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.767 | DEBUG | [main] | insert into personas (birthdate,create_date,delete_date,dni,email,lastname,name,update_date) values (?,?,?,?,?,?,?,?)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:33:00.788 | DEBUG | [main] | select p1_0.id,p1_0.birthdate,p1_0.create_date,p1_0.delete_date,p1_0.dni,p1_0.email,p1_0.lastname,p1_0.name,p1_0.update_date from personas p1_0 where (p1_0.delete_date IS NULL)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:01.183 | INFO  | [SpringApplicationShutdownHook] | Closing JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.624 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.681 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7a117dc2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1d444652)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.681 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@534d0e20) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7d18338b)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.681 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3f4a605f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@30c8c6ab)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.681 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@bcfe29c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@37f71c05)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.681 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5bd3ca3c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2dd8a273)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.682 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@59f76e56) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@566f4659)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.682 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1328f482) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7b8b07ae)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.682 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@19ec5357) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@351d93bd)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:04.682 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@61c5fd78) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@42503099)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.051 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'default'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.322 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.328 | DEBUG | [main] | addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@12f12744) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1c618295)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@344acc03) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@50eae15a)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4bba2704) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5b5f61cc)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@39179470) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3ef04239)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2468c0e4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@49994a4)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1a82453) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3df54fd5)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5ff8d76f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@178c4480)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5746609e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40da1644)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.329 | DEBUG | [main] | addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5980e29f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2cdd156b)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.366 | DEBUG | [main] | 
+    drop table if exists Personas
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.392 | DEBUG | [main] | 
+    create table Personas (
+        birthdate date not null,
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint not null auto_increment,
+        dni varchar(12) not null,
+        email varchar(255) not null,
+        lastname varchar(255) not null,
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.423 | DEBUG | [main] | 
+    alter table Personas 
+       add constraint UK2jcj1t357ygc2ea4gw59lcb9g unique (dni)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.439 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db1'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.454 | INFO  | [main] | No LoadTimeWeaver setup: ignoring JPA class transformer
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.565 | DEBUG | [main] | addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@3338d706) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@f776b4a)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.565 | DEBUG | [main] | addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fb555e8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@19a544cd)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.607 | DEBUG | [main] | 
+    set client_min_messages = WARNING
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.607 | DEBUG | [main] | 
+    drop table if exists Productos cascade
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.611 | DEBUG | [main] | 
+    create table Productos (
+        create_date date,
+        delete_date date,
+        update_date date,
+        id bigint generated by default as identity,
+        name varchar(255) not null,
+        primary key (id)
+    )
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:05.617 | INFO  | [main] | Initialized JPA EntityManagerFactory for persistence unit 'unit_db2'
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:06.364 | DEBUG | [main] | select p1_0.id from personas p1_0 where (p1_0.delete_date IS NULL) and (p1_0.dni=? or p1_0.email=?) limit ?
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:06.396 | DEBUG | [main] | insert into personas (birthdate,create_date,delete_date,dni,email,lastname,name,update_date) values (?,?,?,?,?,?,?,?)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:06.415 | DEBUG | [main] | select p1_0.id,p1_0.birthdate,p1_0.create_date,p1_0.delete_date,p1_0.dni,p1_0.email,p1_0.lastname,p1_0.name,p1_0.update_date from personas p1_0 where (p1_0.delete_date IS NULL)
+ ================================================================================================================================================================================================================================================
+ 2025-04-18 14:35:54.075 | INFO  | [SpringApplicationShutdownHook] | Closing JPA EntityManagerFactory for persistence unit 'default'
+ ========================================================================================================================

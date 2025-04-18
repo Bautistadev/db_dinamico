@@ -149,9 +149,8 @@ public class DataSourceManager {
         }
 
         properties.put("hibernate.hbm2ddl.auto", "create");
-        properties.put("hibernate.show_sql", "true");
-        properties.put("hibernate.format_sql", "true");
-        properties.put("hibernate.use_sql_comments", "true"); // Agregar comentarios en el SQL
+          properties.put("hibernate.format_sql", "true");
+          properties.put("hibernate.use_sql_comments", "true"); // Agregar comentarios en el SQL
         return properties;
     }
 
